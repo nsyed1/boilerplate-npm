@@ -8,7 +8,7 @@ A copy of the repo is hosted on Heroku, and added as a remote.
 You can find `(heroku)` and `(origin)` remotes using the command  
 `git remote -v`  
 
-### Pushing to Heroku branch
+### Pushing to your remote Heroku's master branch
 
 following the format  
 `git push <remote-name> <local-branch>:<remote-branch>`  
