@@ -1,5 +1,10 @@
 # Backend Challenges boilerplate - package.json
 
+## Running locally with Heroku
+
+Start your app locally using  
+`heroku local web`  
+
 ## Deploying on Heroku  
 
 ### Remote repo on Heroku  
