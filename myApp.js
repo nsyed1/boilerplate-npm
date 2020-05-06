@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 
 /** 3) Serve an HTML file */
 app.get('/', function(req, res) {
-    let absolutePath = __dirname + '/views/index.html'
+    var absolutePath = __dirname + '/views/index.html'
     res.sendFile(absolutePath);
 })
 
