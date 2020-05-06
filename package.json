@@ -4,6 +4,7 @@
 	"description": "Challenges from API & Microservices Certification on freeCodeCamp",
 	"keywords": [ "freecodecamp", "heroku", "learning"],
 	"license": "MIT",
+	"version": "1.2.0",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
