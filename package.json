@@ -3,6 +3,7 @@
 	"author": "Noor Syed",
 	"description": "Challenges from API & Microservices Certification on freeCodeCamp",
 	"keywords": [ "freecodecamp", "heroku", "learning"],
+	"license": "MIT",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
