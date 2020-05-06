@@ -1,4 +1,4 @@
-# Backend Challenges boilerplate - package.json
+# Backend Challenges Boilerplate - Basic Express  
 
 ## Running locally with Heroku
 
