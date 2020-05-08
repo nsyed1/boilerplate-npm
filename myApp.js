@@ -52,7 +52,7 @@ app.get('/now', function (req, res, next) {
     req.time = new Date().toString()
     next()
 }, function (req, res) {
-    res.json(req.time)
+    res.json({time:req.time})
 })
 
 /** 9)  Get input from client - Route parameters */
