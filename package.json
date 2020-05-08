@@ -1,22 +1,26 @@
 {
-	"name": "fcc-learn-npm-package-json",
-	"author": "Noor Syed",
-	"description": "Challenges from API & Microservices Certification on freeCodeCamp",
-	"keywords": [ "freecodecamp", "heroku", "learning"],
-	"license": "MIT",
-	"version": "1.2.0",
-	"dependencies": {
-		"express": "^4.14.0"
-	},
+	"name": "fcc-mongo-mongoose-challenges",
+	"version": "0.0.1",
+	"description": "A boilerplate project",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
 	},
+	"dependencies": {
+		"express": "^4.12.4",
+		"body-parser": "^1.15.2"
+	},
 	"engines": {
-		"node": "8.11.2"
+		"node": "4.4.5"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://idontknow/todo.git"
-	}
+		"url": "https://hyperdev.com/#!/project/welcome-project"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express"
+	],
+	"license": "MIT"
 }
