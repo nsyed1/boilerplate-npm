@@ -46,11 +46,12 @@ name : string [required]
 age : number
 favoriteFoods : array of strings (*)
 */
-var Person = new Schema({
+const personSchema = new Schema({
   name: { type: String, required:true },
   age: Number,
   favoriteFoods: [{ type: String }]
 })
+const Person = mongoose.model('Person', personSchema);
 
 // **Note**: Glitch is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
