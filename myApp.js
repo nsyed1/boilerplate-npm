@@ -46,7 +46,7 @@ name : string [required]
 age : number
 favoriteFoods : array of strings (*)
 */
-var personSchema = new Schema({
+var Person = new Schema({
   name: { type: String, required:true },
   age: Number,
   favoriteFoods: [{ type: String }]
