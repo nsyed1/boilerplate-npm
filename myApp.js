@@ -156,9 +156,10 @@ var findOneByFood = function(food, done) {
 // Use the function argument 'personId' as search key.
 
 var findPersonById = function(personId, done) {
-  
-  done(null/*, data*/);
-  
+  Person.findById({_id: personId}, function(err, person){
+    if (err) return console.log(err);
+    done(null, person);
+  })  
 };
 
 /** # CR[U]D part III - UPDATE # 
