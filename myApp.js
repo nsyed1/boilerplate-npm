@@ -15,7 +15,7 @@
 // mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }); 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
+console.log('db connected')
 /** # SCHEMAS and MODELS #
 /*  ====================== */
 
@@ -52,6 +52,7 @@ const personSchema = new Schema({
   favoriteFoods: [{ type: String }]
 })
 const Person = mongoose.model('Person', personSchema);
+console.log('model created')
 
 // **Note**: Glitch is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
@@ -96,7 +97,7 @@ var createAndSavePerson = function(done) {
   })
 
   someGuy.save(function(err, done){
-    if (err) return done(err);
+    if (err) return console.error(err);
     done(null, data);
   })
 };
