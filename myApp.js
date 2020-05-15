@@ -47,9 +47,9 @@ age : number
 favoriteFoods : array of strings (*)
 */
 const personSchema = new Schema({
-  name: { type: String, required:true },
+  name: { type: String, required: true },
   age: Number,
-  favoriteFoods: [{ type: String }]
+  favoriteFoods: [String]
 })
 const Person = mongoose.model('Person', personSchema);
 console.log('model created')
@@ -97,8 +97,8 @@ var createAndSavePerson = function(done) {
   })
 
   person.save(function(err, done){
-    if (err) return console.error(err);
-    done(null, data);
+    if (err) return done(err);
+    return done(null, data);
   })
 };
 
