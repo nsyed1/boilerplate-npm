@@ -16,7 +16,7 @@
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 console.log('db connected to')
-console.log(MONGO_URI)
+console.log(process.env.MONGO_URI)
 /** # SCHEMAS and MODELS #
 /*  ====================== */
 
