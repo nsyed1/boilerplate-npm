@@ -14,15 +14,7 @@
 //
 // mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }); 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function(error){
-  if(error) console.log(error);
-
-  console.log("connection successful");
-  console.log(mongoose.connection.readyState);
-  console.log('db connected to')
-  console.log(process.env.MONGO_URI)
-
-})
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 /** # SCHEMAS and MODELS #
 /*  ====================== */
@@ -49,11 +41,6 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 // <Your code here >
 var Schema = mongoose.Schema;
-/*
-name : string [required]
-age : number
-favoriteFoods : array of strings (*)
-*/
 const personSchema = new Schema({
   name: { type: String, required: true },
   age: Number,
@@ -100,7 +87,7 @@ var createAndSavePerson = function(done) {
   var person = new Person({
     name: 'Noor',
     age: 31,
-    favoriteFoods: ['biryani', 'tikka', 'kebab']
+    favoriteFoods: ['biryani', 'tikka']
   })
 
   person.save(function(err, done){
