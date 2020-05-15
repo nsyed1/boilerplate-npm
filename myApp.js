@@ -18,6 +18,8 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   if(error) console.log(error);
 
       console.log("connection successful");
+      console.log(mongoose.connection.readyState);
+
 })
 console.log('db connected to')
 console.log(process.env.MONGO_URI)
@@ -103,7 +105,7 @@ var createAndSavePerson = function(done) {
 
   person.save(function(err, done){
     if (err) return done(err);
-    return done(null, data);
+    done(null, data);
   })
 };
 
