@@ -89,14 +89,14 @@ console.log('model created')
 //    ...do your stuff here...
 // });
 
-var createAndSavePerson = function(done) {
+var createAndSavePerson = async function(done) {
   var person = new Person({
     name: 'Noor',
     age: 31,
     favoriteFoods: ['biryani', 'tikka', 'kebab']
   })
 
-  person.save(function(err, done){
+  await person.save(function(err, done){
     if (err) done(error);
     done(null, data);
   })
