@@ -106,7 +106,7 @@ var arrayOfPeople = [
   {name: 'Iman', age: 16, favoriteFoods: ['haleem']}
 ]
 var createManyPeople = function(arrayOfPeople, done) {
-    Person.create(function(err, people) {
+    Person.create(arrayOfPeople, function(err, people) {
       if (err) return console.error(err);
       done(null, people);
     })
