@@ -90,14 +90,14 @@ console.log('model created')
 // });
 
 var createAndSavePerson = function(done) {
-  var someGuy = new Person({
+  var person = new Person({
     name: 'Noor',
     age: 31,
     favoriteFoods: ['biryani', 'tikka', 'kebab']
   })
 
-  someGuy.save(function(err, done){
-    if (err) return console.error(err);
+  person.save(function(err, done){
+    if (err) done(error);
     done(null, data);
   })
 };
