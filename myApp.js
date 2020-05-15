@@ -104,8 +104,8 @@ var createAndSavePerson = function(done) {
   })
 
   person.save(function(err, done){
-    if (err) return done(err);
-    done(null, data);
+    if (err) return console.error(err);
+    done(null, data)
   })
 };
 
