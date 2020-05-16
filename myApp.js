@@ -255,8 +255,10 @@ var removeById = function(personId, done) {
 
 var removeManyPeople = function(done) {
   var nameToRemove = "Mary";
-
-  done(null/*, data*/);
+  Person.deleteMany({name: nameToRemove}, function(err, data){
+    if (err) return console.log(err);
+    done(null, data);
+  })
 };
 
 /** # C[R]UD part V -  More about Queries # 
