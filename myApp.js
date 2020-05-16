@@ -286,7 +286,7 @@ var queryChain = function(done) {
     .limit(2)
     .select({age: 0})
     .exec(function(err, data){
-      if (err) return console.error(err);
+      if (err) return console.log(err);
       done(null, data);
     })
 };
